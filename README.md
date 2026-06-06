@@ -82,15 +82,15 @@ http://localhost:5173
 
 ### Giao diện chính
 
-![Home]
+![Home](./src/image1.png)
 
 ### Thêm task mới
 
-![Add Task]
+![Add Task](./src/image2.png)
 
 ### Kiểm tra dữ liệu
 
-![Validation]
+![Validation](./src/image3.png)
 
 ## Tác giả
 
