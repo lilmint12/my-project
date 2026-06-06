@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List Manager</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+    <header class="py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h3 text-dark">Task List</h1>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTaskModal">
+                <i class="bi bi-plus"></i> Add Task
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="list-group shadow-sm" id="taskList">
+            <div class="list-group-item bg-white p-3 d-flex justify-content-between align-items-center">
+                <div style="flex: 2;">
+                    <small class="text-muted d-block text-uppercase" style="font-size: 0.7rem;">Task</small>
+                    <span class="fw-bold">Go to gym</span>
+                </div>
+                <div style="flex: 1;">
+                    <small class="text-muted d-block text-uppercase" style="font-size: 0.7rem;">Priority</small>
+                    <span class="text-danger fw-semibold">High</span>
+                </div>
+                <div style="flex: 1;">
+                    <span class="badge bg-secondary">To Do</span>
+                </div>
+                <div class="d-flex gap-3">
+                    <i class="bi bi-pencil-square text-primary" style="cursor: pointer;"></i>
+                    <i class="bi bi-trash text-danger" style="cursor: pointer;"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="addTaskModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="taskInput" class="form-label">Task</label>
+                        <input type="text" id="taskInput" class="form-control" placeholder="Type your task here...">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label d-block">Priority</label>
+                        <div class="d-flex gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="priority" id="pHigh" value="High" checked>
+                                <label class="form-check-label text-danger" for="pHigh">High</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="priority" id="pMedium" value="Medium">
+                                <label class="form-check-label text-warning" for="pMedium">Medium</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="priority" id="pLow" value="Low">
+                                <label class="form-check-label text-success" for="pLow">Low</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="addBtn">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
