@@ -39,12 +39,12 @@
         </div>
     </main>
 
-    <div class="modal fade" id="addTaskModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="addTaskModal" >
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Add Task</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" id="closeBtn" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
@@ -71,13 +71,12 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" id="addBtn">Add</button>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
