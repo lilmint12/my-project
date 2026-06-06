@@ -43,48 +43,40 @@ Dự án gồm hai phiên bản:
 
 ## Cấu trúc thư mục
 
-my-project
-│
-├── index.html
-├── style.css
-├── script.js
-├── data.json
-│
-├── css
-│   └── ...
-│
-├── js
-│   └── ...
-│
-|-src
-|   |___image1.png
-|   |___image2.png
-|   |___image3.png
-|
-| 
-|
-|
-|
-└── my-task-list-app
-    │
-    ├── README.md
-    ├── package.json
-    ├── package-lock.json
-    ├── vite.config.js
-    │
-    ├── public
-    │   └── ...
-    │
-    ├── src
-    │   ├── App.jsx
-    │   ├── main.jsx
-    │   ├
-    │   ├
-    │   ├
-    │   └── components
-    │       └── ...
-    │
-    └── node_modules
+MY-PROJECT/
+├── icons-1.13.1/           # Thư viện icon
+├── js/                     # Thư mục chứa file JS bootstrap
+├── my-list-todo-app/       # [DỰ ÁN REACT]
+│   ├── node_modules/       # Các thư viện phụ thuộc
+│   ├── public/             # Assets tĩnh
+│   ├── src/                # Mã nguồn React
+│   │   ├── assets/         # Hình ảnh/Icons của React
+│   │   └── components/     # Các thành phần giao diện
+│   │       ├── FormAddToDo.jsx
+│   │       ├── Header.jsx
+│   │       ├── ToDoItem.jsx
+│   │       └── ToDoList.jsx
+│   ├── App.css
+│   ├── App.jsx             # Component gốc
+│   ├── data.json           # Dữ liệu giả lập
+│   ├── index.css
+│   ├── main.jsx            # Entry point của React
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html          # File HTML gốc cho React
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── README.md
+│   └── vite.config.js      # Cấu hình Vite
+├── src/                    # [DỰ ÁN THUẦN - Dùng cho trang đơn]
+│   ├── image1.png
+│   ├── image2.png
+│   └── image3.png
+├── data.json               # Dữ liệu cho phiên bản thuần
+├── index.html              # Trang chủ HTML thuần
+├── README.md
+├── script.js               # Logic cho phiên bản thuần
+└── style.css               # Style cho phiên bản thuần
 
 
 ## Hướng dẫn chạy phiên bản React
