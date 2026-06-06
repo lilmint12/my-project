@@ -8,16 +8,30 @@ function renderTasks(dataList) {
     const listContainer = document.getElementById('taskList');
     listContainer.innerHTML = ""; // Xóa dữ liệu cũ
 
-    dataList.forEach(item => {
-        // Xác định màu sắc dựa trên priority
-        const priorityColor = item.priority === 'High' ? 'danger' : (item.priority === 'Medium' ? 'warning' : 'success');
+    dataList.forEach((item, index) => {
+        // 1. Tính toán giá trị dựa trên Priority
+        let progress = 0;
+        let priorityColor = "success";
 
+        if (item.priority === 'High') {
+            progress = 100;
+            priorityColor = "danger";
+        } else if (item.priority === 'Medium') {
+            progress = 50;
+            priorityColor = "warning";
+        } else {
+            progress = 25;
+            priorityColor = "success";
+        }
+
+        // 2. Tạo HTML cho từng dòng
         const itemHTML = `
-            <div class="list-group-item bg-white p-3 d-flex justify-content-between align-items-center">
+            <div class="list-group-item bg-white p-3 d-flex justify-content-between align-items-center mb-2 shadow-sm" style="border-radius: 12px;">
                 <div style="flex: 2;">
                     <small class="text-muted d-block text-uppercase" style="font-size: 0.7rem;">Task</small>
                     <span class="fw-bold">${item.task}</span>
                 </div>
+                
                 <div style="flex: 1;">
                     <small class="text-muted d-block text-uppercase" style="font-size: 0.7rem;">Priority</small>
                     <span class="text-${priorityColor} fw-semibold">${item.priority}</span>
@@ -25,9 +39,12 @@ function renderTasks(dataList) {
                 <div style="flex: 1;">
                     <span class="badge bg-secondary">${getStatus(item.priority)}</span>
                 </div>
+                <div style="flex: 0.5;">
+                    <div class="circular-progress" style="--value: ${progress};"></div>
+                </div>
                 <div class="d-flex gap-3">
                     <i class="bi bi-pencil-square text-primary" style="cursor: pointer;"></i>
-                    <i class="bi bi-trash text-danger" style="cursor: pointer;"></i>
+                    <i class="bi bi-trash text-danger" style="cursor: pointer;" onclick="deleteTask(${index})"></i>
                 </div>
             </div>
         `;
@@ -54,7 +71,6 @@ async function loadTasks() {
 loadTasks();
 async function addTask(newTask) {
     tasks.push(newTask);
-    localStorage.setItem('myTasks', JSON.stringify(tasks));
     renderTasks(tasks);
     console.log("Đã thêm task vào mảng giả lập!");
 }
