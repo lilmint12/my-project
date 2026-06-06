@@ -1,5 +1,5 @@
 {
-  "name": "my-todo-app",
+  "name": "my-list-todo-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,6 +14,8 @@
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.x.x",
     "@eslint/js": "^10.0.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",

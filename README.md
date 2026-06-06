@@ -43,25 +43,48 @@ Dự án gồm hai phiên bản:
 
 ## Cấu trúc thư mục
 
-my-project/
-
+my-project
+│
 ├── index.html
-
 ├── style.css
-
 ├── script.js
-
 ├── data.json
-
-├── css/
-
-├── js/
-
-└── my-task-list-app/
-
-├── readme.md
-
-├── src/
+│
+├── css
+│   └── ...
+│
+├── js
+│   └── ...
+│
+|-src
+|   |___image1.png
+|   |___image2.png
+|   |___image3.png
+|
+| 
+|
+|
+|
+└── my-task-list-app
+    │
+    ├── README.md
+    ├── package.json
+    ├── package-lock.json
+    ├── vite.config.js
+    │
+    ├── public
+    │   └── ...
+    │
+    ├── src
+    │   ├── App.jsx
+    │   ├── main.jsx
+    │   ├
+    │   ├
+    │   ├
+    │   └── components
+    │       └── ...
+    │
+    └── node_modules
 
 
 ## Hướng dẫn chạy phiên bản React
