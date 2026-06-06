@@ -1,0 +1,23 @@
+[
+      { 
+        "id": 1, 
+        "task": "Hoàn thành bài tập lập trình web", 
+        "priority": "High", 
+        "progress": 0,    
+        "status": "To-Do" 
+      },
+      { 
+        "id": 2, 
+        "task": "Mua đồ dùng học tập", 
+        "priority": "Medium", 
+        "progress": 50,   
+        "status": "In-progress" 
+      },
+      { 
+        "id": 3, 
+        "task": "Đọc tài liệu môn hệ điều hành", 
+        "priority": "Low", 
+        "progress": 100,  
+        "status": "Done" 
+      }
+]

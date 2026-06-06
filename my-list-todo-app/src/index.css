@@ -109,3 +109,29 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+
+/* my style */
+.circular-progress {
+  /* Kích thước vừa phải, gọn gàng */
+  width: 25px; 
+  height: 25px;
+  border-radius: 50%;
+  
+  /* Màu tím giống ảnh của bạn: #6f42c1 */
+  background: conic-gradient(#6f42c1 calc(var(--value) * 1%), #dbdbdb 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  /* Kích thước lõi nhỏ hơn vòng ngoài khoảng 5-6px để tạo viền */
+  width: 19px; 
+  height: 19px;
+  border-radius: 50%;
+  background-color: white; /* Phải trùng với màu nền của task-item */
+}
