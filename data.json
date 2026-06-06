@@ -1,7 +1,7 @@
 [
-  { "id": 1717647400001, "task": "Hoàn thành bài tập lập trình web", "priority": "High" },
-  { "id": 1717647400002, "task": "Mua đồ dùng học tập", "priority": "Medium" },
-  { "id": 1717647400003, "task": "Đọc tài liệu môn hệ điều hành", "priority": "Low" },
-  { "id": 1717647400004, "task": "Tập thể dục buổi sáng 30 phút", "priority": "High" },
-  { "id": 1717647400005, "task": "Gửi email báo cáo tiến độ dự án", "priority": "Medium" }
+  { "task": "Hoàn thành bài tập lập trình web", "priority": "High" },
+  { "task": "Mua đồ dùng học tập", "priority": "Medium" },
+  { "task": "Đọc tài liệu môn hệ điều hành", "priority": "Low" },
+  { "task": "Tập thể dục buổi sáng 30 phút", "priority": "High" },
+  { "task": "Gửi email báo cáo tiến độ dự án", "priority": "Medium" }
 ]
